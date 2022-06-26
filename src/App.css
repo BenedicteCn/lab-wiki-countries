@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -35,4 +36,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.container{
+  display: flex;
+  margin-left: 1%
+
+}
+
+.col-5 {
+  max-height: 40vh;
+  overflow: scroll;
 }

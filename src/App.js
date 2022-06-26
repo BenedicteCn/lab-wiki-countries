@@ -2,27 +2,20 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import CountryDetails from './components/CountryDetails';
-import Layout from './components/Layout';
 import countriesData from './countries.json';
 import AxiosApi from './components/AxiosAPI';
 import OneCountryAPI from './components/OneCountryAPI';
-import { useParams } from 'react'; // <== IMPORT useEffect
+import CountriesList from './components/CountriesList';
+import Navbar from './components/Navbar';
 
 function App() {
-  function Child() {
-    let { id } = useParams();
-
-    return (
-      <div>
-        <CountryDetails someData={countriesData} />
-      </div>
-    );
-  }
-
   return (
     <div className="App">
+      <Navbar />
+      <div className="container">
+        <CountriesList />
+      </div>
       <Routes>
-        <Route path="/" element={<Layout />} />
         <Route
           path="/:id"
           element={<CountryDetails someData={countriesData} />}
@@ -33,4 +26,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

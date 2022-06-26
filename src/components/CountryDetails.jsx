@@ -14,7 +14,7 @@ export const CountryDetails = (props) => {
   return (
     <div>
       <Link to="/">Back</Link>
-       <div className="col-7">
+      <div className="col-7">
        <img
                 src={`https://flagpedia.net/data/flags/icon/72x54/${countryAlphaCode.alpha2Code.toLowerCase()}.png`} width="25px"
               alt = "lol"/>
